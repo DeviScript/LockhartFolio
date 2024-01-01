@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ElectroFest: The Ultimate Music Festival</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .full-screen-video {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .full-screen-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .parallax {
+            background: url('festival_image.jpg') no-repeat center center/cover;
+            height: 500px;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        .artist-lineup {
+            background: #111;
+            color: #ddd;
+        }
+
+        .ticket-info {
+            background: #333;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="full-screen-video">
+        <video autoplay loop muted>
+            <source src="festival_video.mp4" type="video/mp4">
+        </video>
+        <div class="content-overlay">
+            <h1>ElectroFest 2024</h1>
+            <p>The ultimate music festival experience awaits!</p>
+        </div>
+    </div>
+
+    <div class="parallax"></div>
+
+    <div class="section artist-lineup">
+        <h2>Artist Lineup</h2>
+        <p>Featuring the best of electronic music from around the world.</p>
+        <!-- Artist details here -->
+    </div>
+
+    <div class="parallax"></div>
+
+    <div class="section ticket-info">
+        <h2>Ticket Information</h2>
+        <p>Get your tickets now for an unforgettable experience!</p>
+        <!-- Ticketing details here -->
+    </div>
+
+    <footer>
+        &copy; 2024 ElectroFest. All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>

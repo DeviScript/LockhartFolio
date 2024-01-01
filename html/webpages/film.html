@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cinema Paradiso: A Tribute to the Magic of Movies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Oswald', sans-serif;
+            background: #000;
+            color: #fff;
+        }
+
+        .header {
+            background: url('cinema_header.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: #fff;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .header h1 {
+            position: relative;
+            font-size: 3.5rem;
+            z-index: 1;
+        }
+
+        .film-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .film-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .film-section p {
+            font-size: 1.1rem;
+            margin: 0 auto 20px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Cinema Paradiso</h1>
+    </div>
+
+    <div class="film-section">
+        <h2>Genres of Cinema</h2>
+        <p>Explore the vast world of cinema through its genres - from thrilling action to heartwarming romance, and
+            avant-garde art films to mainstream blockbusters.</p>
+    </div>
+
+    <div class="gallery">
+        <img src="./../../assets/img/portfolio/webpages/film/film.png" alt="Action Film">
+        <img src="./../../assets/img/portfolio/webpages/film/film.png" alt="Romance Film">
+        <img src="./../../assets/img/portfolio/webpages/film/film.png" alt="Art Film">
+        <!-- Additional images can be added here -->
+    </div>
+
+    <div class="film-section">
+        <h2>Iconic Directors</h2>
+        <p>Dive into the minds of cinema's greatest directors, understanding their vision, style, and influence on the
+            art of filmmaking.</p>
+    </div>
+
+    <footer>
+        &copy; 2024 Cinema Paradiso. A Journey Through the Art of Film.
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timeline of Space Exploration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: #202020;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #bbb;
+        }
+
+        .timeline {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0;
+        }
+
+        .event {
+            position: absolute;
+            bottom: 50%;
+            transform: translateY(50%);
+            width: 200px;
+            padding: 10px;
+            background: #333;
+            border: 1px solid #555;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .event:hover {
+            transform: translateY(50%) scale(1.1);
+        }
+
+        .line {
+            position: absolute;
+            height: 3px;
+            background: #fff;
+            width: 300%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .marker {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 20px;
+            width: 20px;
+            background: #ff0;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Timeline of Space Exploration</h1>
+        <p>Discover the key milestones in the journey of space exploration, from the first satellite to the latest
+            missions.</p>
+    </div>
+
+    <div class="timeline">
+        <div class="line"></div>
+
+        <div class="event" style="left: 10%;">
+            <h2>1957</h2>
+            <p>Launch of Sputnik, the first artificial satellite.</p>
+        </div>
+
+        <div class="marker" style="left: 10%;"></div>
+
+        <div class="event" style="left: 30%;">
+            <h2>1969</h2>
+            <p>Apollo 11 mission, first humans on the Moon.</p>
+        </div>
+
+        <div class="marker" style="left: 30%;"></div>
+
+        <div class="event" style="left: 50%;">
+            <h2>1981</h2>
+            <p>First Space Shuttle launch, Columbia.</p>
+        </div>
+
+        <div class="marker" style="left: 50%;"></div>
+
+        <!-- Additional events can be added here -->
+    </div>
+
+    <footer>
+        &copy; 2024 Timeline of Space Exploration. All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
