@@ -576,30 +576,25 @@
     </section><!-- End Blog Section -->
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
+<!-- ======= Footer ======= -->
 <footer>
   <div class="footer-content">
     <div class="footer-left">
       <h3>Contact Me</h3>
-      <form id="contact-form" action="php/contact-form-handler.php" method="post">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-        <p id="form-message" style="color: white; display: none;"></p>
+      <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/YOUR_FORM_ID" method="post">
+        <fieldset id="fs-frm-inputs">
+          <label for="full-name">Full Name</label>
+          <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+          
+          <label for="email-address">Email Address</label>
+          <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+          
+          <label for="message">Message</label>
+          <textarea rows="5" name="message" id="message" placeholder="Your message" required=""></textarea>
+          
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" value="Submit">
       </form>
     </div>
     <br>
@@ -609,6 +604,8 @@
   </div>
 </footer>
 <!-- End Footer -->
+
+
 
 <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
