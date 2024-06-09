@@ -1556,31 +1556,76 @@ a:hover {
 --------------------------------------------------------------*/
 
 footer {
-  text-align: center;
+  background-color: #222;
   color: #fff;
-  padding: 25px 0;
-  background: black;
+  padding: 40px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 20px;
 }
 
-.footer-left {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
+.footer-left,
+.footer-quotes,
 .footer-center {
-  text-align: center;
+  margin: 10px 0;
 }
 
-.footer-left h3 {
-  margin-bottom: 15px;
+.footer-left h3,
+.footer-quotes h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #f1c40f;
 }
 
+.footer-left p,
+.footer-quotes blockquote,
+.footer-center p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+.footer-left a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
+.footer-quotes blockquote {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-left: 5px solid #f1c40f;
+  background-color: #333;
+  color: #f1f1f1;
+  font-style: italic;
+}
+
+.footer-center p {
+  font-size: 0.9rem;
+  color: #bdc3c7;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-left,
+  .footer-quotes,
+  .footer-center {
+    flex: 1;
+    max-width: 300px;
+  }
+}
 
 
