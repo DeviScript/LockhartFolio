@@ -157,4 +157,36 @@
     });
   }
 
-})()
+// Form submission handling
+const contactForm = select('#contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+
+    fetch('php/contact-form-handler.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      const formMessage = select('#form-message');
+      if (data === 'Thank you! Your message has been sent.') {
+        formMessage.style.color = 'green';
+        contactForm.reset();
+      } else {
+        formMessage.style.color = 'red';
+      }
+      formMessage.textContent = data;
+      formMessage.style.display = 'block';
+    })
+    .catch(error => {
+      const formMessage = select('#form-message');
+      formMessage.style.color = 'red';
+      formMessage.textContent = 'Oops! Something went wrong and we couldn\'t send your message.';
+      formMessage.style.display = 'block';
+    });
+  });
+}
+
+})();

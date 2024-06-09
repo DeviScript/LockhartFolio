@@ -67,51 +67,38 @@
                     <div class="col-sm-6 col-md-5">
                       <div class="about-img">
                         <img src="./assets/img/introduction/Brian_Professional.JPG" class="img-fluid rounded b-shadow-a"
-                          alt="">
+                          alt="Brian Lockhart">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-7">
                       <div class="about-info">
                         <p><span class="title-s">Name: </span> <span>Brian Lockhart</span></p>
-                        <p><span class="title-s">Degree: </span> <span>Bachelor of Arts in Interdisciplinary
-                            Studies</span></p>
+                        <p><span class="title-s">Degree: </span> <span>Bachelor of Arts in Interdisciplinary Studies</span></p>
                         <p><span class="title-s">Certificate: </span> <span>Full Stack Web Development</span></p>
-                        <p><span class="title-s">School: </span> <span>University of North Carolina</span>
-                        </p>
-
+                        <p><span class="title-s">School: </span> <span>University of North Carolina</span></p>
                       </div>
                     </div>
                   </div>
                   <div class="skill-mf">
-                    <h4>Key Achievements</h4>
-                    <span><b>1. Phi Kappa Phi Honor Society Member</b></span><br>
-                    <span><b>2. Perfect 4.0 GPA in Interdisciplinary Studies and Accounting</b></span><br>
-                    <span><b>3. Proficient in Web Development and Data Analysis</b></span><br>
-                    <span><b>4. Office Administration and Research Management Experience</b></span><br>
+                    <h4 class="title-s">Key Achievements</h4>
+                    <ul class="list-unstyled">
+                      <li><b>1. Phi Kappa Phi Honor Society Member</b></li>
+                      <li><b>2. Perfect 4.0 GPA in Interdisciplinary Studies and Accounting</b></li>
+                      <li><b>3. Proficient in Web Development and Data Analysis</b></li>
+                      <li><b>4. Office Administration and Research Management Experience</b></li>
+                    </ul>
                   </div>
                 </div>
                 <!-- Second Column -->
                 <div class="col-md-6">
                   <div class="about-me pt-4 pt-md-0">
                     <div class="title-box-2">
-                      <h5 class="title-left">
-                        Introduction
-                      </h5>
+                      <h5 class="title-left">Introduction</h5>
                     </div>
                     <div class="about-text">
-                      <p class="lead">
-                        Welcome to my professional journey. As a dedicated scholar and a dynamic professional, I have
-                        cultivated a unique blend of academic excellence and technical proficiency. My journey through
-                        the University of North Carolina's rigorous interdisciplinary studies and accounting programs
-                        has been marked by a perfect 4.0 GPA and membership in the prestigious Phi Kappa Phi Honor
-                        Society.</p>
-                      <p class="lead">
-                        My skills extend beyond academia into practical application, with technical expertise in
-                        programming languages such as JavaScript, HTML, CSS, and tools like Microsoft Excel. My diverse
-                        experiences, ranging from office administration to participating in the X-Culture Global
-                        Symposium, have equipped me with a comprehensive skill set ready to tackle complex challenges in
-                        a dynamic environment.
-                      </p>
+                      <p class="lead">Welcome to my professional journey. As a dedicated scholar and a dynamic professional, I have
+                        cultivated a unique blend of academic excellence and technical proficiency. My journey through the University of North Carolina's rigorous interdisciplinary studies and accounting programs has been marked by a perfect 4.0 GPA and membership in the prestigious Phi Kappa Phi Honor Society.</p>
+                      <p class="lead">My skills extend beyond academia into practical application, with technical expertise in programming languages such as JavaScript, HTML, CSS, and tools like Microsoft Excel. My diverse experiences, ranging from office administration to participating in the X-Culture Global Symposium, have equipped me with a comprehensive skill set ready to tackle complex challenges in a dynamic environment.</p>
                     </div>
                   </div>
                 </div>
@@ -590,23 +577,40 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer>
-    <footer>
-      <div class="footer-content">
-        <div class="footer-left">
-          <h3>Contact Me</h3>
-          <p>Email: DeviScript@outlook.com</p>
-          <p>Phone: +1 (904) 408-8879</p>
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>Contact Me</h3>
+      <form id="contact-form" action="php/contact-form-handler.php" method="post">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
         </div>
-        <br>
-        <div class="footer-center">
-          <p>&copy; 2024 Brian Lockhart. All rights reserved.</p>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
         </div>
-      </div>
-    </footer>
-    <!-- End  Footer  -->
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+        <p id="form-message" style="color: white; display: none;"></p>
+      </form>
+    </div>
+    <br>
+    <div class="footer-center">
+      <p>&copy; 2024 Brian Lockhart. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
 
-    <div id="preloader"></div>
+<div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
 

@@ -1,18 +1,11 @@
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+/* General Styles */
 body {
   background-color: #f5f5f5;
   color: #4e4e4e;
-  font-family: "poppins";
+  font-family: "Poppins", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: #1e1e1e;
 }
 
@@ -25,20 +18,101 @@ a {
 a:hover {
   color: #0078ff;
   text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Certifications Section */
+.certifications-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (max-width: 1024px) {
+  .bg-image {
+    background-attachment: scroll;
+  }
+}
+
+.overlay-mf {
+  background-color: #0078ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .7;
+}
+
+.paralax-mf {
+  position: relative;
+  padding: 8rem 0;
+}
+
+.btn-ejournal {
+  width: 80%;
+  max-width: 800px;
+  height: 100px;
+  background: rgb(4, 86, 249);
+  opacity: 100%;
+  color: #faf7f7;
+  border: 3px solid transparent;
+  border-radius: 100px;
+  font-size: 4rem;
+  font-weight: bold;
   transition: all 0.5s ease-in-out;
 }
 
-.team-detail{
+.btn-ejournal:hover {
+  background: transparent;
+  color: white;
+  border: 3px solid white;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 770px) {
+  .btn-ejournal {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .btn-ejournal {
+    font-size: 2.5rem;
+  }
+}
+
+.tab-space {
+  padding-left: 20px;
+}
+
+.team-detail {
   padding-top: 20px;
   padding-bottom: 65px;
 }
 
-.project-detail{
+.project-detail {
   padding-top: 53px;
   padding-bottom: 25px;
 }
 
-.home-btn{
+.home-btn {
   width: 350px;
   height: 40px;
   background: #0078ff;
@@ -48,14 +122,14 @@ a:hover {
   transition: all 0.5s ease-in-out;
 }
 
-.home-btn:hover{
+.home-btn:hover {
   background: white;
   border: 3px solid #0078ff;
   color: #0078ff;
   transition: all 0.5s ease-in-out;
 }
 
-.home-btn-portfolio{
+.home-btn-portfolio {
   width: 355px;
   height: 40px;
   background: black;
@@ -65,16 +139,17 @@ a:hover {
   transition: all 0.5s ease-in-out;
 }
 
-.home-btn-portfolio:hover{
+.home-btn-portfolio:hover {
   background: white;
   color: black;
   border: 3px solid grey;
   transition: all 0.5s ease-in-out;
 }
 
-.about-text{
+.about-text {
   text-align: justify;
 }
+
 .p-r {
   position: relative;
 }
@@ -121,98 +196,51 @@ a:hover {
   overflow: hidden;
 }
 
-.bg-image {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-}
-
-@media (max-width: 1024px) {
-  .bg-image {
-    background-attachment: scroll;
+@media (max-width: 768px) {
+  .home-btn {
+    width: 185px;
+    height: inherit;
   }
 }
 
-.overlay-mf {
-  background-color: #0078ff;
-  
-}
-
-.overlay-mf {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  opacity: .7;
-}
-
-.paralax-mf {
-  position: relative;
-  padding: 8rem 0;
-}
-
-.btn-ejournal{
-  width: 800px;
-  height: 150px;
-  background: white;
-  opacity: 100%;
-  color: #0078ff;
-  border: 3px solid transparent;
-  border-radius: 100px;
-  font-size: 4rem;
-  font-weight: bold;
-  transition: all 0.5s ease-in-out;
-}
-
-.btn-ejournal:hover{
-  background: transparent;
-  color: white;
-  border: 3px solid white;
-  transition: all 0.5s ease-in-out;
-}
-@media (max-width: 770px){
-  .btn-ejournal{
-    width: 80%;
-    font-size: 3rem;
+@media (max-width: 376px) {
+  .home-btn {
+    width: 284px;
+    height: inherit;
   }
 }
 
-@media (max-width: 430px){
-  .btn-ejournal{
-    width: 80%;
-    font-size: 2.5rem;
+@media (max-width: 320px) {
+  .home-btn-portfolio {
+    width: 200px;
+    height: inherit;
   }
 }
 
-.tab-space{
-  padding-left: 25px;
+@media (max-width: 768px) {
+  .home-btn-portfolio {
+    width: 185px;
+    height: inherit;
+  }
 }
 
-.display-table {
-  width: 100%;
-  height: 100%;
-  display: table;
+@media (max-width: 376px) {
+  .home-btn-portfolio {
+    width: 284px;
+    height: inherit;
+  }
 }
 
-.table-cell {
-  display: table-cell;
-  vertical-align: middle;
+@media (max-width: 320px) {
+  .home-btn-portfolio {
+    width: 245px;
+    height: inherit;
+  }
 }
 
 /*--/ Sections /--*/
-.sect-4 {
-  padding: 4rem 0;
-}
-
 .sect-pt4 {
   padding-top: 4rem;
-}
-
-.sect-mt4 {
-  margin-top: 4rem;
 }
 
 /*--/ Title s /--*/
@@ -265,7 +293,7 @@ a:hover {
   bottom: -12px;
 }
 
-@media(max-width:321px){
+@media (max-width: 321px) {
   .title-left {
     font-size: 1.8rem;
     position: relative;
@@ -359,6 +387,8 @@ a:hover {
 
 .scrolltop-mf span {
   z-index: 999;
+
+
   position: fixed;
   width: 42px;
   height: 42px;
@@ -559,6 +589,7 @@ a:hover {
   background: rgba(0, 0, 0, 0.9);
   padding: 12px 0;
 }
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -704,7 +735,6 @@ a:hover {
   transition: 0.5s;
 }
 
-
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
@@ -742,7 +772,9 @@ a:hover {
   padding: 10px 0;
   background-color: #fff;
   overflow-y: auto;
-  transition: 0.3s;
+ 
+
+ transition: 0.3s;
 }
 
 .navbar-mobile > ul > li {
@@ -806,28 +838,40 @@ a:hover {
   height: 100vh;
   position: relative;
   color: #fff;
+  z-index: 1; /* Ensure hero section is on top */
 }
 
 .hero .hero-content {
+  display: table;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  position: absolute;
+  z-index: 3; /* Ensure hero content is on top of everything */
+  position: relative; /* Required for z-index to work */
+}
+
+.hero .table-cell {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .hero .overlay-itro {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3); /* Adjusted opacity to make text more visible */
   position: absolute;
   top: 0;
-  left: 0px;
+  left: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  opacity: .9;
+  opacity: 0.9; /* Ensure the overlay isn't too dark */
+  z-index: 2; /* Ensure overlay is above background but below text */
 }
 
 .hero .hero-title {
   color: #fff;
   font-weight: 600;
   font-size: 3rem;
+  z-index: 4; /* Ensure text is on top of overlay */
 }
 
 @media (min-width: 768px) {
@@ -839,6 +883,7 @@ a:hover {
 .hero .hero-subtitle {
   font-size: 1.5rem;
   font-weight: 600;
+  z-index: 4; /* Ensure subtitle is on top of overlay */
 }
 
 @media (min-width: 768px) {
@@ -887,52 +932,90 @@ a:hover {
   color: #fff;
 }
 
+
 /*--------------------------------------------------------------
-# About
+# About Section Styles */
 --------------------------------------------------------------*/
-#about{
-  font-size: 18px;
-}
-#about p{
-  font-size: 19px;
-}
+
 .about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 3rem;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .about-mf .about-img {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .about-mf .about-img img {
-  margin-left: 0px;
-  border: 1px solid black;
-  height: 170px;
-  width: 900px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
 }
 
-@media (min-width: 767px) {
-  .about-mf .box-pl2 {
-    margin-top: 3rem;
-    padding-left: 0rem;
-  }
+.about-info {
+  margin-top: 20px;
 }
 
-.skill-mf span {
-  color: #4e4e4e;
+.about-info p {
+  margin-bottom: 10px;
 }
 
-.skill-mf .progress {
-  background-color: #cde1f8;
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+.title-s {
+  font-weight: 600;
+  color: #0078ff;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
+.skill-mf {
+  margin-top: 20px;
+}
+
+.skill-mf ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.skill-mf ul li {
+  margin-bottom: 10px;
+}
+
+.title-left {
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.title-left:before {
+  content: '';
+  position: absolute;
+  height: 3px;
   background-color: #0078ff;
+  width: 50px;
+  bottom: -10px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-me {
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-mf .about-img img {
+    width: 100%;
+  }
+  .about-me {
+    padding-top: 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1065,7 +1148,7 @@ a:hover {
   font-size: 1.2rem;
 }
 
-@media (max-width: 770px){
+@media (max-width: 770px) {
   .work-content .w-like {
     font-size: 2.5rem;
     color: #0078ff;
@@ -1080,8 +1163,8 @@ a:hover {
   }
 }
 
-@media (max-width: 430px){
-  .filler{
+@media (max-width: 430px) {
+  .filler {
     display: none;
   }
 }
@@ -1098,7 +1181,7 @@ a:hover {
   height: 520px;
 }
 
-@media (max-width: 770px){
+@media (max-width: 770px) {
   .portfolio-details .portfolio-details-slider img {
     width: 100%;
     height: 300px;
@@ -1146,14 +1229,15 @@ a:hover {
 
 .portfolio-details .portfolio-info ul {
   list-style: none;
-  padding: 0;
+ 
+
+ padding: 0;
   font-size: 15px;
 }
 
 .portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
-
 
 .portfolio-details .portfolio-info-sci {
   padding: 25px;
@@ -1295,6 +1379,7 @@ a:hover {
   height: 250px;
   width: 420px;
 }
+
 .card-blog .card-body {
   position: relative;
 }
@@ -1341,7 +1426,7 @@ a:hover {
   display: inline-block;
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
   .card-blog .post-author {
     font-size: 13px;
   }
@@ -1359,77 +1444,22 @@ a:hover {
 /*--------------------------------------------------------------
 # Blog Single
 --------------------------------------------------------------*/
-.post-box,
-.form-comments,
-.box-comments,
-.widget-sidebar {
+.post-box, .form-comments, .box-comments, .widget-sidebar {
   padding: 2rem;
   background-color: #fff;
   margin-bottom: 2.95rem;
 }
 
-.post-thumb img{
+.post-thumb img {
   height: 500px;
   width: 790px;
 }
 
-@media (max-width: 768px){
-  .post-thumb img{
+@media (max-width: 768px) {
+  .post-thumb img {
     height: 275px;
     width: 700px;
   }  
-}
-
-@media (max-width: 768px) {
-  .home-btn{
-    width: 185px;
-    height: inherit;
-  }
-}
-
-@media (max-width: 376px){
-  .home-btn{
-    width: 284px;
-    height: inherit;
-  }
-}
-
-@media (max-width: 320px){
-  .home-btn-portfolio{
-    width: 200px;
-    height: inherit;
-  }
-}
-
-@media (max-width: 768px) {
-  .home-btn-portfolio{
-    width: 185px;
-    height: inherit;
-  }
-}
-
-@media (max-width: 376px){
-  .home-btn-portfolio{
-    width: 284px;
-    height: inherit;
-  }
-}
-
-@media (max-width: 320px){
-  .home-btn-portfolio{
-    width: 245px;
-    height: inherit;
-  }
-}
-
-@media (max-width: 768px) {
-  .post-box,
-  .form-comments,
-  .box-comments,
-  .widget-sidebar {
-    padding: 1rem;
-    font-size: 15px;
-  }
 }
 
 .blog-wrapper .article-title {
@@ -1524,7 +1554,7 @@ a:hover {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-footer {
+/* footer {
   text-align: center;
   color: #fff;
   padding: 25px 0;
@@ -1541,4 +1571,85 @@ footer .credits {
 
 footer .credits a {
   color: #fff;
+} */
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 25px 0;
+  background: black;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-left {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-left h3 {
+  margin-bottom: 15px;
+}
+
+form {
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #0078ff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-left,
+  .footer-center {
+    text-align: center;
+  }
+
+  form {
+    max-width: 100%;
+  }
 }
